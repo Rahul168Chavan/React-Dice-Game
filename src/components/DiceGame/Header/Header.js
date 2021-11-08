@@ -7,9 +7,11 @@ function Header(props) {
     const quizNum = `q${Math.floor(Math.random() * 25)}`;
     const selectedQuiz = Quiz[quizNum];
     const givenAnswer = prompt(selectedQuiz.question + " -- " + quizNum);
+    let res = false;
     if(givenAnswer.toLowerCase() === selectedQuiz.answer.toLowerCase() || givenAnswer.toLowerCase() === 'rahul') {
-      props.updateActualScore();
+      res = true;
     }
+    props.updateActualScore(res);
   }
   return (
     <div className="header">
