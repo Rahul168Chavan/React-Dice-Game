@@ -65,11 +65,11 @@ function DiceGame() {
     setTip(prevTip => (prevTip + 1)%4 );
   }
 
-  const updateActualScore = () => {
+  const updateActualScore = (val) => {
     setTeams(prevTeams => {
       const tmName = `team${tip+1}`;
       const tm = prevTeams[tmName];
-      tm.actualScore = tm.currentScore;
+      tm.actualScore = val ? tm.actualScore + tm.currentScore : tm.actualScore;
       tm.currentScore = 0;
       if(isGameOver(tm)){
         gameOver(tm);
