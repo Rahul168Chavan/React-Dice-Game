@@ -14,10 +14,10 @@ function Header(props) {
     props.updateActualScore(res);
   }
   return (
-    <div className="header">
-      <button onClick={props.newGame} className="btn-new"><i className="ion-ios-plus-outline"></i>New game</button>
-      <button onClick={props.rollDice} className="btn-roll"><i className="ion-ios-loop"></i>Roll dice</button>
-      <button onClick={askQuestion} className="btn-hold"><i className="ion-ios-download-outline"></i>Hold</button>
+    <div className="header" id="header">
+      <button onClick={props.newGame} className="btn-new" id="header" data-point="btn-new"><i className="ion-ios-plus-outline" id="header" data-point="plus-outline"></i>New game</button>
+      <button onClick={props.rollDice} className="btn-roll" id="header" data-tip="btn-roll"><i className="ion-ios-loop" id="header" data-point="loopButton"></i>Roll dice</button>
+      <button onClick={askQuestion} className="btn-hold" id="header" data-check-point="btn-hold header"><i className="ion-ios-download-outline" id="header" data-point="ion-ios-download-outline"></i>Hold</button>
     </div>
   );
 }

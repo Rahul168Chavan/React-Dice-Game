@@ -20,13 +20,13 @@ function DiceNum(props) {
   const dots = new Array(props.num).fill(0).map((_, ind) => {
     updateCustomStyle(ind);
     return (
-      <div className="dot-back" style={customStyle}>
-        <div className='dot'></div>
+      <div className="dot-back" black-dot="dot-back" id="dot-back" style={customStyle}>
+        <div className='dot' data-tip="dot"></div>
       </div>
     );
   });
   return (
-    <div className="dice-back">
+    <div className="dice-back" id="diceBack" data-point="backData">
       <div className={`dice ${anime}`}>{dots}</div>
     </div>
   )

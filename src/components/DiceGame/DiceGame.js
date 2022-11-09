@@ -85,9 +85,9 @@ function DiceGame() {
   }
 
   return (
-    <div className="container">
-      <div className="board">
-        <div className='top-heading'>Game for <b>{score}</b> points</div>
+    <div className="container" id="container-id">
+      <div className="board" id="board">
+        <div className="top-heading" id="topHeading">Game for <b>{score}</b> points</div>
         <Header rollDice={rollDice} newGame={newGame} updateActualScore={updateActualScore}/>
         <UsersBoard teams={teams} activeTeamName={activeTeamName}/>
       </div>

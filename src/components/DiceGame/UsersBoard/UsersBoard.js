@@ -4,7 +4,7 @@ import './users-board.css'
 
 function UsersBoard(props) {
   return (
-    <div className="main">
+    <div className="main" id="mainBoard">
       {Object.keys(props.teams).map(team => <User key={team} team={props.teams[team]} activeTeamName={props.activeTeamName}/>)}
     </div>
   );
